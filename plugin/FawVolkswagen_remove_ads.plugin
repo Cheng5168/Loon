@@ -6,6 +6,7 @@
 #!tag=去广告
 #!loon_version=3.2.4(787)
 
+[Rewrite]
 ^https?:\/\/oneapp-api\.faw-vw\.com\/search\/firstPage\/getPromptList\/v1\?.* response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
 ^https?:\/\/oneapp-api\.faw-vw\.com\/benefits\/benefitsCard\/getInfo\/v1\?.* response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
 ^https?:\/\/oneapp-api\.faw-vw\.com\/content\/booth\/getBoothList\/v1\?.*showPositionCode=VWAPP_HOME_BUOY response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'
