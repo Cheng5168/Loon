@@ -13,6 +13,7 @@
 # 首页文字广告
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICE reject-dict
 # 发现页广告
+^https?:\/\/client-api-v2\.oray\.com\/materials reject-200
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION reject-dict
 
 [MITM]
