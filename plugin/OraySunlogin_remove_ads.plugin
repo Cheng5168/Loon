@@ -1,11 +1,11 @@
 #!name=向日葵去广告
 #!desc=移除开屏广告、广告横幅。
+#!date=2025-10-03 00:00:00
 #!author=fmz200[https://github.com/fmz200]
 #!icon=https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/OraySunlogin.png
 #!tag=去广告
 #!loon_version=3.2.4(787)
-#!homepage=https://github.com/fmz200
-#!date=2025-10-03 00:00:00
+
 
 [Rewrite]
 # 开屏广告
