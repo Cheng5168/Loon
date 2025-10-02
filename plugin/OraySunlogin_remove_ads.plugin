@@ -6,7 +6,6 @@
 #!tag=去广告
 #!loon_version=3.2.4(787)
 
-
 [Rewrite]
 # 开屏广告
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP reject-dict
