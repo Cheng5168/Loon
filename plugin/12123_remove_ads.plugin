@@ -1,0 +1,14 @@
+#!name = 12123去广告
+#!desc = 移除交管12123开屏广告。
+#!date=2025-09-23 20:00:00
+#!author=fmz200[https://github.com/fmz200]
+#!icon=https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/12123.png
+#!tag=去广告
+#!loon_version=3.2.4(787)
+
+[Rewrite]
+#^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery reject
+^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject
+
+[MITM]
+hostname = gab.122.gov.cn
