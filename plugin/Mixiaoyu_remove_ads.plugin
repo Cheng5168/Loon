@@ -1,0 +1,14 @@
+#!name=蜜小语会员解锁
+#!desc=蜜小语会员解锁。
+#!date=2025-10-02 00:00:00
+#!author=Yu9191[https://github.com/Yu9191]
+#!icon=https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/Mixiaoyu.png
+#!tag=去广告
+#!loon_version=3.2.4(787)
+
+[Script]
+http-request https:\/\/api\.honey\.zzzs888\.com\/api\/apple\/open\/chat_stream script-path=https://raw.githubusercontent.com/Cheng5168/Loon/main/js/Mixiaoyu.js, timeout=60, tag=蜜小语会员解锁
+http-response https:\/\/api\.honey\.zzzs888\.com\/api\/apple\/account\?version script-path=https://raw.githubusercontent.com/Cheng5168/Loon/main/js/Mixiaoyu.js, requires-body=true, timeout=60, tag=蜜小语会员解锁
+
+[MITM]
+hostname = api.honey.zzzs888.com
