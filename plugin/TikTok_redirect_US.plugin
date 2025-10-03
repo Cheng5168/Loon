@@ -1,0 +1,16 @@
+#!name = TikTok 解锁美国
+#!desc = TikTok 解锁。
+#!date=2025-10-03 00:00:00
+#!author=Cheng5168[https://github.com/Cheng5168]
+#!icon=https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/TikTok.png
+#!tag=功能增强
+#!loon_version=3.2.4(787)
+
+[Rewrite]
+(?<=_region=)CN(?=&) US 307
+(?<=&mcc_mnc=)4 2 307
+^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$3 302
+(?<=\d\/\?\w{7}_\w{4}=)1[6-9]..(?=.?.?&) 17 307
+
+[MITM]
+hostname = *.tiktokv.com, *.byteoversea.com, *.tik-tokapi.com
