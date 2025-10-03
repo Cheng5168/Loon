@@ -1,0 +1,13 @@
+#!name = TG外链直跳SG
+#!desc = Telegram外链直接跳转三方客户端Swiftgram。
+#!date=2025-10-03 00:00:00
+#!author=Cheng5168[https://github.com/Cheng5168]
+#!icon=https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/Swiftgram.png
+#!tag=去广告
+#!loon_version=3.2.4(787)
+
+[Rewrite]
+(https:\/\/)?t\.me\/(.+) sg://resolve?domain=$2 302
+
+[MITM]
+hostname = t.me
