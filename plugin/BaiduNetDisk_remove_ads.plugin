@@ -1,10 +1,9 @@
-#!name=百度网盘去广告
-#!desc=移除开屏广告、首页卡片广告、传输页面广告、各类弹窗，精简侧拉抽屉和我的页面。
-#!date=2025-05-13 15:17:08
-#!author=可莉🅥[https://hub.kelee.one]
-#!icon=https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/BaiduNetDisk.png
-#!tag=去广告
-#!loon_version=3.2.4(787)
+#!name = 百度网盘去广告
+#!desc = 移除开屏广告、首页卡片广告、传输页面广告、各类弹窗，精简侧拉抽屉和我的页面。
+#!date = 2025-05-13 15:17:08
+#!author = 可莉🅥[https://hub.kelee.one]
+#!icon = https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/BaiduNetDisk.png
+#!loon_version = 3.2.4(787)
 
 [Rewrite]
 ^https:\/\/pan\.baidu\.com\/api\/getconfig reject-dict

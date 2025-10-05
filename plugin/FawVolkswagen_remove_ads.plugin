@@ -1,10 +1,9 @@
-#!name=一汽大众去广告
-#!desc=移除一汽大众开屏广告。
-#!date=2025-09-23 20:00:00
-#!author=fmz200[https://github.com/fmz200]
-#!icon=https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/FawVolkswagen.png
-#!tag=去广告
-#!loon_version=3.2.4(787)
+#!name = 一汽大众去广告
+#!desc = 移除一汽大众开屏广告。
+#!date = 2025-09-23 20:00:00
+#!author = fmz200[https://github.com/fmz200]
+#!icon = https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/FawVolkswagen.png
+#!loon_version = 3.2.4(787)
 
 [Rewrite]
 ^https?:\/\/oneapp-api\.faw-vw\.com\/search\/firstPage\/getPromptList\/v1\?.* response-body-json-jq '. = { returnStatus: "SUCCEED", hasMore: false, data: [] }'

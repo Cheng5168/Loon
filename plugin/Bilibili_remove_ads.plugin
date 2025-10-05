@@ -1,10 +1,9 @@
-#!name=哔哩哔哩去广告
-#!desc=过滤哔哩哔哩广告、移除青少年模式弹窗和交互式弹幕、移除无用功能和链接跟踪参数，增加空降助手以便跳过视频中插入的广告。此插件仅建议iOS15以上设备使用，且必须启用MitM-over-HTTP/2功能。\n\n空降助手是第三方提供的功能，依赖于Android版空降助手的服务器数据运作，可能会存在不准确或者失效的问题，此功能与哔哩哔哩官方无关。
-#!date=2025-09-27 01:20:12
-#!author=kokoryh[https://github.com/kokoryh]
-#!icon=https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/Bilibili.png
-#!tag=去广告
-#!loon_version=3.2.4(787)
+#!name = 哔哩哔哩去广告
+#!desc = 过滤哔哩哔哩广告、移除青少年模式弹窗和交互式弹幕、移除无用功能和链接跟踪参数，增加空降助手以便跳过视频中插入的广告。此插件仅建议iOS15以上设备使用，且必须启用MitM-over-HTTP/2功能。\n\n空降助手是第三方提供的功能，依赖于Android版空降助手的服务器数据运作，可能会存在不准确或者失效的问题，此功能与哔哩哔哩官方无关。
+#!date = 2025-09-27 01:20:12
+#!author = kokoryh[https://github.com/kokoryh]
+#!icon = https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/Bilibili.png
+#!loon_version = 3.2.4(787)
 
 [Argument]
 showUpList=select, "auto", "show", "hide", tag=[动态]中[最常访问]的显示方式, desc=auto：仅当列表中存在直播状态时显示；show：始终显示；hide：始终隐藏。
@@ -43,9 +42,9 @@ AND, ((DOMAIN-SUFFIX, chat.bilibili.com), (OR, ((DOMAIN-KEYWORD, stun), (DOMAIN-
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.view\.v1\.View\/TFInfo$ mock-response-body data-type=base64 data="AAAAAAIIAQ==" mock-data-is-base64=true
 
 [Script]
-http-request ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$ script-path=https://raw.githubusercontent.com/Cheng5168/Loon/main/js/Bilibili/Bilibili_proto_request_kokoryh.js, requires-body=true, binary-body-mode=true, enable={airborne}, argument=[{logLevel}], tag=空降助手
-http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.(show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(unite)?\.v1\.View\/(View|ViewProgress|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$ script-path=https://raw.githubusercontent.com/Cheng5168/Loon/main/js/Bilibili/Bilibili_proto_response_kokoryh.js, requires-body=true, binary-body-mode=true, argument=[{showUpList}, {purifyTopReplies}, {airborne}, {logLevel}], tag=ProtoBuf处理
-http-response ^https:\/\/live\.bilibili\.com\/blackboard\/era\/.+\.html\? script-path=https://raw.githubusercontent.com/Cheng5168/Loon/main/js/Bilibili/webpage_Bilibili_remove_ads_kokoryh.js, requires-body=true, enable={purifyWebpage}, tag=移除直播间网页广告
+http-request ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$ script-path = https://raw.githubusercontent.com/Cheng5168/Loon/main/js/Bilibili/Bilibili_proto_request_kokoryh.js, requires-body=true, binary-body-mode=true, enable={airborne}, argument=[{logLevel}], tag=空降助手
+http-response ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(app\.(show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(unite)?\.v1\.View\/(View|ViewProgress|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$ script-path = https://raw.githubusercontent.com/Cheng5168/Loon/main/js/Bilibili/Bilibili_proto_response_kokoryh.js, requires-body=true, binary-body-mode=true, argument=[{showUpList}, {purifyTopReplies}, {airborne}, {logLevel}], tag=ProtoBuf处理
+http-response ^https:\/\/live\.bilibili\.com\/blackboard\/era\/.+\.html\? script-path = https://raw.githubusercontent.com/Cheng5168/Loon/main/js/Bilibili/webpage_Bilibili_remove_ads_kokoryh.js, requires-body=true, enable={purifyWebpage}, tag=移除直播间网页广告
 
 [MitM]
 hostname=grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com, live.bilibili.com, line3-h5-mobile-api.biligame.com

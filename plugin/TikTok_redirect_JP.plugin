@@ -1,10 +1,9 @@
 #!name = TikTok 解锁日本
 #!desc = TikTok 解锁。
-#!date=2025-10-03 00:00:00
-#!author=Cheng5168[https://github.com/Cheng5168]
-#!icon=https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/TikTok.png
-#!tag=功能增强
-#!loon_version=3.2.4(787)
+#!date = 2025-10-03 00:00:00
+#!author = Cheng5168[https://github.com/Cheng5168]
+#!icon = https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/TikTok.png
+#!loon_version = 3.2.4(787)
 
 [Rewrite]
 (?<=_region=)CN(?=&) JP 307

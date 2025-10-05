@@ -1,10 +1,9 @@
-#!name=HTTPDNS拦截器
-#!desc=拦截常见的HTTPDNS服务，以确保这些请求都能够在Loon的DNS框架下工作。
-#!date=2025-08-20 00:30:31
-#!author=可莉🅥[https://hub.kelee.one]
-#!icon=https://raw.githubusercontent.com/Cheng5168/IconResource/main/Other_icon/HTTPDNS.png
-#!tag=去广告
-#!loon_version=3.2.4(787)
+#!name = HTTPDNS拦截器
+#!desc = 拦截常见的HTTPDNS服务，以确保这些请求都能够在Loon的DNS框架下工作。
+#!date = 2025-08-20 00:30:31
+#!author = 可莉🅥[https://hub.kelee.one]
+#!icon = https://raw.githubusercontent.com/Cheng5168/IconResource/main/Other_icon/HTTPDNS.png
+#!loon_version = 3.2.4(787)
 
 [Rule]
 DOMAIN, yyapp-httpdns.gslb.yy.com, REJECT

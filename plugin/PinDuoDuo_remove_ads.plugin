@@ -1,9 +1,8 @@
-#!name=拼多多去广告
-#!desc=移除开屏广告、底栏多多视频、会场入口、聊天页面精选推荐及推广，精简首页和个人中心。
-#!date=2025-07-16 00:52:53
-#!author=RuCu6[https://github.com/RuCu6], ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://hub.kelee.one]
-#!icon=https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/PinDuoDuo.png
-#!tag=去广告
+#!name = 拼多多去广告
+#!desc = 移除开屏广告、底栏多多视频、会场入口、聊天页面精选推荐及推广，精简首页和个人中心。
+#!date = 2025-07-16 00:52:53
+#!author = RuCu6[https://github.com/RuCu6], ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://hub.kelee.one]
+#!icon = https://raw.githubusercontent.com/Cheng5168/IconResource/main/App_icon/PinDuoDuo.png
 #!loon_version=3.2.4(787)
 
 [Rule]
