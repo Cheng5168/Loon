@@ -6,8 +6,8 @@
 #!loon_version = 3.2.4(787)
 
 [Script]
-http-request https:\/\/api\.honey\.zzzs888\.com\/api\/apple\/open\/chat_stream script-path = https://raw.githubusercontent.com/Cheng5168/Loon/main/js/Mixiaoyu.js, timeout=60, tag=蜜小语会员解锁
-http-response https:\/\/api\.honey\.zzzs888\.com\/api\/apple\/account\?version script-path = https://raw.githubusercontent.com/Cheng5168/Loon/main/js/Mixiaoyu.js, requires-body=true, timeout=60, tag=蜜小语会员解锁
+http-request https:\/\/api\.honey\.zzzs888\.com\/api\/apple\/open\/chat_stream script-path = https://raw.githubusercontent.com/Cheng5168/Loon/main/JS/Mixiaoyu.js, timeout=60, tag=蜜小语会员解锁
+http-response https:\/\/api\.honey\.zzzs888\.com\/api\/apple\/account\?version script-path = https://raw.githubusercontent.com/Cheng5168/Loon/main/JS/Mixiaoyu.js, requires-body=true, timeout=60, tag=蜜小语会员解锁
 
 [MITM]
 hostname = api.honey.zzzs888.com

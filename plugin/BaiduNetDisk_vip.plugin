@@ -6,7 +6,7 @@
 #!loon_version = 3.2.4(787)
 
 [Script]
-http-response ^https?:\/\/pan\.baidu\.com.+(rest\/.+\/membership\/user|api\/user\/getinfo)\? script-path = https://raw.githubusercontent.com/Cheng5168/Loon/main/js/BaiduNetDisk.js, requires-body=true, timeout=60, tag=百度网盘解锁
+http-response ^https?:\/\/pan\.baidu\.com.+(rest\/.+\/membership\/user|api\/user\/getinfo)\? script-path = https://raw.githubusercontent.com/Cheng5168/Loon/main/JS/BaiduNetDisk.js, requires-body=true, timeout=60, tag=百度网盘会员解锁
 
 [MITM]
 hostname = pan.baidu.com, *.pcs.baidu.com, *.baidu.com
